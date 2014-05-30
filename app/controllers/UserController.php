@@ -175,7 +175,7 @@ class UserController extends BaseController {
 				//send email with link to activate.
 				Mail::send('emails.auth.welcome', $data, function($m) use($data)
 				{
-				    $m->to($data['email'])->subject('Welcome to StampOut');
+				    $m->to($data['email'])->subject('Welcome to Laravel BoilerPlate');
 				});
 
 				//success!
@@ -375,7 +375,7 @@ class UserController extends BaseController {
 			    // Email the reset code to the user
 				Mail::send('emails.auth.reset', $data, function($m) use($data)
 				{
-				    $m->to($data['email'])->subject('Password Reset Confirmation | StampOut');
+				    $m->to($data['email'])->subject('Password Reset Confirmation | Laravel BoilerPlate');
 				});
 
 				Session::flash('success', 'Check your email for password reset information.');
@@ -414,7 +414,7 @@ class UserController extends BaseController {
 
 			    Mail::send('emails.auth.newpassword', $data, function($m) use($data)
 				{
-				    $m->to($data['email'])->subject('New Password Information | StampOut');
+				    $m->to($data['email'])->subject('New Password Information | Laravel BoilerPlate');
 				});
 
 				Session::flash('success', 'Your password has been changed. Check your email for the new password.');

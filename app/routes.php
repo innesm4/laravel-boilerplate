@@ -47,7 +47,7 @@ Route::resource('cities', 'CitiesController');
 
 Route::get('/test', function()
 {
-	$testsms = Sms::send(array('to'=>'+447811031112', 'text'=>'Hello this message is sent from StampOut ;)'));
+	$testsms = Sms::send(array('to'=>'+447811031112', 'text'=>'Hello ;)'));
 
 	return View::make('hello');
 
