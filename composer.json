@@ -2,11 +2,9 @@
 	"name": "laravel/laravel",
 	"require": {
 		"laravel/framework": "4.1.*",
-		"stripe/stripe-php": "1.9.0",
 		"cartalyst/sentry": "2.0.*",
 		"dollar/generators": "dev-master",
-		"edvinaskrucas/notification": "2.*",
-		"twilio/laratwilio": "dev-master"
+		"edvinaskrucas/notification": "2.*"
 	},
 	"autoload": {
 		"classmap": [
