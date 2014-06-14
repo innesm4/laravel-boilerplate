@@ -66,14 +66,14 @@ module.exports = function(grunt) {
         },
         watch: {
             scripts: {
-                files: ['public/js/*.js'],
+                files: ['public/assets/js/*.js'],
                 tasks: ['concat', 'uglify'],
                 options: {
                     spawn: false,
                 },
             },
             css: {
-                files: ['public/css/*/*.scss'],
+                files: ['public/assets/css/*/*.scss'],
                 tasks: ['sass'],
                 options: {
                     spawn: false,
