@@ -5,7 +5,8 @@
 		"cartalyst/sentry": "2.0.*",
 		"dollar/generators": "dev-master",
 		"edvinaskrucas/notification": "2.*",
-		"phpunit/phpunit": "4.0.*"
+		"phpunit/phpunit": "4.0.*",
+		 "mockery/mockery": "dev-master@dev"
 	},
 	"autoload": {
 		"classmap": [
