@@ -4,7 +4,8 @@
 		"laravel/framework": "4.1.*",
 		"cartalyst/sentry": "2.0.*",
 		"dollar/generators": "dev-master",
-		"edvinaskrucas/notification": "2.*"
+		"edvinaskrucas/notification": "2.*",
+		"phpunit/phpunit": "4.0.*"
 	},
 	"autoload": {
 		"classmap": [
