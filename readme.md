@@ -1,5 +1,7 @@
 # Laravel 4 starter app
 
+[![Build Status](https://travis-ci.org/innesm4/laravel-boilerplate.svg)](https://travis-ci.org/innesm4/laravel-boilerplate)
+
 Using Laravel 4 and Sentry 2
 
 ## Installation instructions
