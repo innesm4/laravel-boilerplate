@@ -1,4 +1,6 @@
-<?php namespace StampOut\Billing;
+<?php 
+
+namespace StampOut\Billing;
 
 use Stripe;
 use Stripe_Charge;
