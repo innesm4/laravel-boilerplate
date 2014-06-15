@@ -1,7 +1,6 @@
 <?php
 
 use Mockery as m;
-use Way\Tests\Factory;
 
 class CitiesTest extends TestCase {
 
