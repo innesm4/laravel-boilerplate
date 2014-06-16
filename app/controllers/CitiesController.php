@@ -43,12 +43,21 @@ class CitiesController extends BaseController {
 	 */
 	public function store()
 	{
-		$input = Input::all();
+		$input  = [
+			'city_name' => Input::get('city_name'),
+			'image' => Input::file('image')->getClientOriginalName()
+		];
+
 		$validation = Validator::make($input, City::$rules);
 
 		if ($validation->passes())
 		{
-			$this->city->create($input);
+
+			$destinationPath = '/uploads/images/';
+			$filename = str_random(12) . Input::file('image')->getClientOriginalName();
+			$upload_success = Input::file('image')->move(public_path() . $destinationPath, $filename);
+
+			$this->city->create($input);	
 
 			return Redirect::route('cities.index');
 		}
@@ -57,6 +66,7 @@ class CitiesController extends BaseController {
 			->withInput()
 			->withErrors($validation)
 			->with('message', 'There were validation errors.');
+		
 	}
 
 	/**
