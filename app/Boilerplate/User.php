@@ -1,7 +1,8 @@
-<?php
+<?php namespace Boilerplate;
 
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
+use Eloquent;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
