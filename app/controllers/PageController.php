@@ -1,6 +1,6 @@
 <?php
 
-class HomeController extends BaseController {
+class PageController extends BaseController {
 
 	/*
 	|--------------------------------------------------------------------------
@@ -15,17 +15,10 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
+	public function home()
 	{
-		if (Sentry::check()){
-			
-		return View::make('hello');
 
-		}
-		else {
-			
-			return View::make('hello');
-		}
-	
+		return View::make('page.home');
 	}
+
 }

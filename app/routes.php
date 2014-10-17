@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', array('as' => 'home', 'uses' => 'HomeController@showWelcome'));
+Route::get('/', array('as' => 'home', 'uses' => 'PageController@home'));
 
 
 /*
