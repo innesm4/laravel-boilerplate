@@ -21,7 +21,7 @@
 // Imports for other scss files. Bootsrap will require the developer to manually set the breakpoints used in the site in order for the grid system to operate correctly.
 
 
-@import "layout/bootstrap",
+@import "layout/all",
 		"vendor/all",
         "layout/all";
 
