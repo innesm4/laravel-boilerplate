@@ -524,7 +524,6 @@ class UserController extends BaseController {
 				    // Update the user details
 				    $user->first_name = $input['firstName'];
 				    $user->last_name = $input['lastName'];
-				    $user->city = $input['city'];
 
 				    // Update the user
 				    if ($user->save())
