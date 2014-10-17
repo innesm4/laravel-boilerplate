@@ -37,14 +37,6 @@ Profile</h4>
     		</div>
     	</div>
 
-        <div class="control-group {{ $errors->has('city') ? 'error' : '' }}" for="city">
-            <label class="control-label" for="city">City</label>
-            <div class="controls">
-                {{ Form::select('city', $cities, (Request::old('city')) ? Request::old("city") : $user->city, array('class'=>'form-control', 'placeholder'=>'City')) }} 
-                {{ ($errors->has('city') ?  $errors->first('city') : '') }}
-            </div>
-        </div>
-
     	<div class="form-actions">
 	    	<input class="btn-primary btn" type="submit" value="Submit Changes"> 
 	    	<input class="btn-inverse btn" type="reset" value="Reset">

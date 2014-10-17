@@ -79,3 +79,8 @@ http://four.laravel.com/docs/migrations
 The generated cat Schema that was created in the app/database/migrations folder and now be placed into the database
 
 php artisan migrate
+
+## Grunt
+
+npm install
+

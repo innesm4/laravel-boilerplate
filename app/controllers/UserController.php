@@ -124,21 +124,14 @@ class UserController extends BaseController {
 	 */
 	public function getRegister()
 	{
-		$cities = City::orderBy('city_name')->lists('city_name', 'city_name');
-		return View::make('users.register')
-		->with('cities', $cities);
+		return View::make('users.register');
 	}
 
 	public function postRegister() 
 	{
 		// Gather Sanitized Input
-		$mobile44 = Input::get('mobilenumber');
-
-
 		$input = array(
 			'email' => Input::get('email'),
-			'mobilenumber' => Input::get('mobilenumber'),
-			'city' => Input::get('city'),
 			'password' => Input::get('password'),
 			'password_confirmation' => Input::get('password_confirmation')
 			);
@@ -146,8 +139,6 @@ class UserController extends BaseController {
 		// Set Validation Rules
 		$rules = array (
 			'email' => 'required|min:4|max:32|email|unique:users',
-			'mobilenumber' => 'size:11',
-			'city' => 'required',
 			'password' => 'required|min:6|confirmed',
 			'password_confirmation' => 'required'
 			);
@@ -165,7 +156,7 @@ class UserController extends BaseController {
 
 			try {
 				//Attempt to register the user. 
-				$user = Sentry::register(array('email' => $input['email'],'mobilenumber' => $input['mobilenumber'],'city' => $input['city'], 'password' => $input['password']));
+				$user = Sentry::register(array('email' => $input['email'], 'password' => $input['password']));
 
 				//Get the activation code & prep data for email
 				$data['activationCode'] = $user->GetActivationCode();
@@ -468,19 +459,17 @@ class UserController extends BaseController {
 		   	//Do they have admin access?
 			if ( $currentUser->hasAccess('admin'))
 			{	
-				$cities = City::orderBy('city_name')->lists('city_name', 'city_name');
 				$data['user'] = Sentry::getUserProvider()->findById($id);
 				$data['userGroups'] = $data['user']->getGroups();
 				$data['allGroups'] = Sentry::getGroupProvider()->findAll();
-				return View::make('users.edit')->with($data)->with('cities', $cities);
+				return View::make('users.edit')->with($data);
 			} 
 			elseif ($currentUser->getId() == $id)
 			{
 				//They are not an admin, but they are viewing their own profile.
-				$cities = City::orderBy('city_name')->lists('city_name', 'city_name');
 				$data['user'] = Sentry::getUserProvider()->findById($id);
 				$data['userGroups'] = $data['user']->getGroups();
-				return View::make('users.edit')->with($data)->with('cities', $cities);
+				return View::make('users.edit')->with($data);
 			} else {
 				Session::flash('error', 'You don\'t have access to that user.');
 				return Redirect::to('/');
@@ -499,8 +488,7 @@ class UserController extends BaseController {
 		// Gather Sanitized Input
 		$input = array(
 			'firstName' => Input::get('firstName'),
-			'lastName' => Input::get('lastName'),
-			'city' => Input::get('city'),
+			'lastName' => Input::get('lastName')
 
 			);
 
