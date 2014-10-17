@@ -1,23 +1,16 @@
 {
 	"name": "innesm4/laravel-boilerplate",
     "description": "Laravel 4 starter app.",
-	"repositories": 
-	[
-    	{
-            "type": "vcs",
-            "url": "https://github.com/innesm4/Laravel-4-Generators-Bootstrap-3"
-    	}
-
-    ],
 	"require": {
-		"laravel/framework": "4.1.*",
+		"laravel/framework": "4.2.*",
 		"cartalyst/sentry": "2.0.*"
 	},
 	"require-dev": {
 		"codeception/codeception": "*",
 		"mockery/mockery": "dev-master",
 		"phpunit/phpunit": "4.2.*",
-        "phpspec/phpspec": "~2.0"
+        "phpspec/phpspec": "~2.0",
+        "dollar/generators": "dev-master"
 	},
 	"autoload": {
 		"classmap": [

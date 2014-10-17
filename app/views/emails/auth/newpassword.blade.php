@@ -9,6 +9,6 @@
 		<p>Here is your new password:</p>
 		<p><blockquote>{{{ $newPassword }}}</blockquote></p>
 		<p>Thank you, <br />
-			~StampOut team.</p>
+			~{{{ Config::get('boilerplate.site-name') }}} team.</p>
 	</body>
 </html>
