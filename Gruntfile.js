@@ -57,11 +57,7 @@ module.exports = function(grunt) {
         },
     });
 
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-shell');
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-contrib-watch');
+    require('load-grunt-tasks')(grunt);
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('default', ['shell', 'concat', 'uglify', 'sass', 'watch']);
