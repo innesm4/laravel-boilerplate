@@ -31,27 +31,12 @@ Route::controller('users', 'UserController');
 Route::resource('groups', 'GroupController');
 
 
-/*
-|-----------------------------------------------------------------------
-| Cities
-|-----------------------------------------------------------------------
-*/
-
-Route::resource('cities', 'CitiesController');
 
 /*
 |-----------------------------------------------------------------------
 | Testing
 |-----------------------------------------------------------------------
 */
-
-Route::get('/test', function()
-{
-	$testsms = Sms::send(array('to'=>'+447811031112', 'text'=>'Hello ;)'));
-
-	return View::make('hello');
-
-});
 
 Route::get('/random', function()
 {

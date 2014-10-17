@@ -1,7 +1,9 @@
 <?php
 
-return [
+return array(
+
 	'connections' => array(
+
 
 		'mysql' => array(
 			'driver'    => 'mysql',
@@ -11,7 +13,11 @@ return [
 			'password'  => 'root',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
-			'prefix'    => ''
-        )
-    )
-];
+			'prefix'    => '',
+		),
+
+	),
+
+
+
+);
