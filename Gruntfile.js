@@ -29,31 +29,6 @@ module.exports = function(grunt) {
                 dest: 'public/assets/js/build/production.min.js'
             }
         },
-
-        jshint: {
-            src: ['Gruntfile.js', 'public/assets/js/build/production.js', 'public/assets/js/build/production.min.js'],
-            options: {
-                curly: true,
-                eqeqeq: true,
-                immed: true,
-                latedef: true,
-                newcap: true,
-                noarg: true,
-                sub: true,
-                undef: true,
-                boss: true,
-                eqnull: true,
-                browser: true,
-                globals: {
-                    require: true,
-                    define: true,
-                    requirejs: true,
-                    describe: true,
-                    expect: true,
-                    it: true
-                }
-            }
-        },
         sass: {
             dist: {
                 options: {
@@ -82,8 +57,6 @@ module.exports = function(grunt) {
         },
     });
 
-    // 3. Where we tell Grunt we plan to use this plug-in.
-    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-shell');
@@ -91,6 +64,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['shell', 'concat', 'uglify', 'sass', 'watch', 'jshint']);
+    grunt.registerTask('default', ['shell', 'concat', 'uglify', 'sass', 'watch']);
 
 };

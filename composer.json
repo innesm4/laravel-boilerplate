@@ -6,7 +6,7 @@
 		"dollar/generators": "dev-master",
 		"edvinaskrucas/notification": "2.*",
 		"phpunit/phpunit": "4.0.*",
-		 "mockery/mockery": "dev-master@dev"
+		"mockery/mockery": "dev-master@dev"
 	},
 	"autoload": {
 		"classmap": [
@@ -20,10 +20,7 @@
 		
 		"files": [	
 			"app/gravatar.php"
-		],
-		"psr-0": {
-            "Acme": "app/"
-        }
+		]
 	},
 	"scripts": {
 		"post-update-cmd": "php artisan optimize"
